@@ -3,338 +3,227 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jewelry Retouching Services</title>
+    <title>My Jewelry Retouch</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <style>
-      /* Custom Styles */
-      body {
-        font-family: "Arial", sans-serif;
-        background-color: #f8f9fa;
-        color: #333;
-      }
-      .hero-section {
-        background-image: url("./images/hero-1.jpg");
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      }
-      .hero-section h1 {
-        font-size: 4rem;
-        font-weight: bold;
-      }
-      .hero-section p {
-        font-size: 1.25rem;
-        margin-top: 1rem;
-      }
-      .services img {
-        max-width: 100%;
-        border-radius: 0.5rem;
-      }
-      .workflow-section {
-        padding: 4rem 0;
-        background-color: #ffffff;
-      }
-      .workflow-section h2 {
-        margin-bottom: 2rem;
-      }
-      .workflow-step {
-        text-align: center;
-      }
-      .workflow-step img {
-        width: 80px;
-        margin-bottom: 1rem;
-      }
-      .workflow-step p {
-        font-size: 1rem;
-        margin-top: 0.5rem;
-      }
-      .contact-section {
-        background-color: #333;
-        color: white;
-        padding: 3rem 0;
-      }
-      .contact-section h2 {
-        margin-bottom: 2rem;
-      }
-      .btn-custom {
-        background-color: #d4af37;
-        color: white;
-        border: none;
-      }
-      .btn-custom:hover {
-        background-color: #c19a2a;
-      }
-      .pricing-container {
-        text-align: center;
-        padding: 50px 20px;
-      }
-
-      .pricing-header {
-        font-size: 2em;
-        margin-bottom: 20px;
-        color: #333;
-      }
-
-      .pricing-plans {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-
-      .pricing-plan {
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        padding: 20px;
-        width: 300px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-
-      .pricing-plan:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
-
-      .plan-title {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-        color: #555;
-      }
-
-      .plan-price {
-        font-size: 2em;
-        margin: 15px 0;
-        color: #007bff;
-      }
-
-      .plan-details {
-        font-size: 1em;
-        margin-bottom: 20px;
-        color: #666;
-      }
-
-      .plan-action {
-        display: block;
-        text-decoration: none;
-        background-color: #007bff;
-        color: #fff;
-        padding: 10px 15px;
-        border-radius: 5px;
-        font-size: 1em;
-        transition: background-color 0.3s;
-      }
-
-      .plan-action:hover {
-        background-color: #0056b3;
-      }
-
-      .custom-quote {
-        margin-top: 30px;
-      }
-
-      .custom-quote a {
-        color: #007bff;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s;
-      }
-
-      .custom-quote a:hover {
-        color: #0056b3;
-      }
-
-      .pricing-container,
-      .testimonials-container,
-      .contact-container,
-      .footer-container {
-        text-align: center;
-        padding: 50px 20px;
-      }
-
-      .pricing-header,
-      .testimonials-header,
-      .contact-header,
-      .footer-header {
-        font-size: 2em;
-        margin-bottom: 20px;
-        color: #333;
-      }
-
-      .contact-form {
-        max-width: 500px;
-        margin: 0 auto;
-        background: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      .contact-form label {
-        display: block;
-        font-size: 1em;
-        color: #555;
-        margin-bottom: 5px;
-      }
-
-      .contact-form input,
-      .contact-form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 1em;
-      }
-
-      .contact-form button {
-        width: 100%;
-        background-color: #007bff;
-        color: #fff;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1em;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .contact-form button:hover {
-        background-color: #0056b3;
-      }
-
-      .additional-contact {
-        margin-top: 20px;
-      }
-
-      .additional-contact a {
-        display: block;
-        color: #007bff;
-        text-decoration: none;
-        margin: 10px 0;
-        font-weight: bold;
-        transition: color 0.3s;
-      }
-
-      .additional-contact a:hover {
-        color: #0056b3;
-      }
-
-      .footer-container {
-        background-color: #333;
-        color: #fff;
-        padding: 20px 0;
-      }
-
-      .footer-container .footer-links {
-        margin-bottom: 20px;
-      }
-
-      .footer-container a {
-        color: #007bff;
-        text-decoration: none;
-        margin: 0 10px;
-        font-weight: bold;
-        transition: color 0.3s;
-      }
-
-      .footer-container a:hover {
-        color: #ff6347;
-      }
-
-      .footer-container .social-icons {
-        margin: 10px 0;
-      }
-
-      .footer-container .social-icons img {
-        width: 30px;
-        margin: 0 5px;
-      }
-
-      .footer-container .contact-info {
-        font-size: 0.9em;
-      }
-    </style>
+    <link href="styles.css" rel="stylesheet"/>
   </head>
   <body>
+  <nav class="navbar navbar-expand-lg navbar-custom bg-dark">
+    <div class="container-fluid">
+      <!-- Logo -->
+       <div class="logo">
+      <a class="navbar-brand" href="#"><img src= "./images/logo.png"  alt="mylogo" class="image"/><span>
+        <h3>My Jewellery Retouch</h3
+      </span>
+      </a>
+    </div>
+      
+      <!-- Hamburger Icon -->
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#workflow">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div>
+        <button  type="button" class="btn btn-outline-warning mybtn">Contact Us</button>
+      </div>
+      </div>
+    </div>
+  </nav>
     <!-- Hero Section -->
     <header class="hero-section">
       <div class="container">
-        <h1>Professional Jewelry Retouching</h1>
+        <h1>Professional Jewellery Retouching</h1>
         <p>
-          Enhance the brilliance of your jewelry with our expert retouching
+          Enhance the brilliance of your jewellery with our expert retouching
           services.
         </p>
-        <a href="#services" class="btn btn-custom btn-lg mt-3"
-          >Explore Services</a
-        >
+        <a href="#services" class="btn btn-custom btn-lg mt-6 ms-5"
+          >Explore Services</a>
       </div>
     </header>
 
     <!-- Services Section -->
     <section id="services" class="py-5">
       <div class="container">
-        <h2 class="text-center mb-5">Our Services</h2>
+        <h2 class="text-center mb-5">Photo Editing Solutions We Offer</h2>
         <div class="row g-4">
           <div class="col-md-4">
-            <div class="card">
+            <div class="card me-4">
               <img
-                src="./images/2 (3).jpg"
+                src="./images/Service-1.jpg"
                 class="card-img-top"
                 alt="Background Removal"
               />
-              <div class="card-body">
-                <h5 class="card-title">Background Removal</h5>
-                <p class="card-text">
-                  Make your jewelry stand out with clean and professional
-                  backgrounds.
-                </p>
+              <div class="card-body bg-dark">
+                <h5 class="card-title cards">&nbsp;High-Resolution <br>Image Retouching</h5>
+                <button type="button" class="btn btn-warning btn-card">Read More</button>
               </div>
+              
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card">
+            <div class="card me-3">
               <img
-                src="./images/1 (6).jpg"
+                src="./images/Service-3.jpg"
                 class="card-img-top"
                 alt="Color Correction"
               />
-              <div class="card-body">
-                <h5 class="card-title">Color Correction</h5>
-                <p class="card-text">
-                  Bring out the true colors of your gemstones with our color
-                  correction service.
-                </p>
+              <div class="card-body bg-dark ">
+                <h5 class="card-title cards">Creative Jewellery<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Editing</h5>
+                <button type="button" class="btn btn-warning btn-card">Read More</button>
               </div>
+          </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="./images/6 (1).jpg"
+                  class="card-img-top"
+                  alt="Shine Enhancement"
+                />
+                <div class="card-body bg-dark">
+                  <h5 class="card-title cards">Diamond, Gemstone<br>&nbsp;&nbsp;Enhancement
+                  </h5>
+                  <button type="button" class="btn btn-warning btn-card mt-4">Read More</button>
+                </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="servicess" class="py-5 choose">
+      <div class="container-choose">
+        <!-- Section Title -->
+        <h2>WHY CHOOSE US?</h2>
+        <p>
+          Our experts are tech enthusiasts and always stay updated with new technology
+          They can help your business <br>by providing excellent Jewellery Photo Editing services.
+          We love to work with precision and transparency so that our service<br> never puts any bad effects on your business.
+          Client satisfaction is the one thing we always focus on.
+        </p>
+    
+        <!-- Cards Container -->
+        <div class="card-container">
+          <!-- Card 1 -->
+          <div class="cardss">
+            <div class="card-content">
+              <h1>Attention to Detail</h1>
+              <p>
+                We pride ourselves on our meticulous approach, ensuring every image reflects
+                the true beauty of your jewellery.
+              </p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="./images/6 (2).jpg"
-                class="card-img-top"
-                alt="Shine Enhancement"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Shine Enhancement</h5>
-                <p class="card-text">
-                  Add brilliance and sparkle to your jewelry for a premium look.
-                </p>
-              </div>
+    
+          <!-- Card 2 -->
+          <div class="cardss">
+            <div class="card-content">
+              <h1>Expert Team</h1>
+              <p>
+                Our skilled professionals are experienced in the nuances of jewellery retouching
+                and use the latest technology to achieve the highest standards.
+              </p>
+            </div>
+          </div>
+    
+          <!-- Card 3 -->
+          <div class="cardss">
+            <div class="card-content">
+              <h1>Fast Turnaround</h1>
+              <p>
+                We understand the importance of timely delivery and work efficiently to meet your deadlines
+                and make a good bond with us.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+     <!-- Portfolio Section -->
+<section class="portfolio">
+  <div class="container ">
+    <h2>Portfolio</h2>
+
+    <!-- Portfolio Categories -->
+    <div class="portfolio-grid">
+      <a href="#all" class="portfolio-item">All</a>
+      <a href="#clipping" class="portfolio-item">Clipping Path</a>
+      <a href="#retouching" class="portfolio-item">Retouching</a>
+      <a href="#color-correction" class="portfolio-item">Color-Correction</a>
+      <a href="#model-jewelry" class="portfolio-item">Model + Jewelry</a>
+    </div>
+
+    <!-- Image Display Section -->
+    <div class="portfolio-images">
+      <div id="all" class="image-gallery">
+        <img src="./images/1 (6).jpg" alt="All Portfolio 1">
+        <img src="./images/1 (6).jpg" alt="All Portfolio 2">
+        <img src="./images/1 (6).jpg" alt="All Portfolio 2">
+
+      </div>
+      <div id="clipping" class="image-gallery">
+        <img src="./images/1 (6).jpg" alt="Clipping Path 1">
+        <img src="./images/1 (6).jpg" alt="Clipping Path 2">
+        <img src="./images/1 (6).jpg" alt="All Portfolio 2">
+
+      </div>
+      <div id="retouching" class="image-gallery">
+        <img src="./images/1 (6).jpg" alt="Retouching 1">
+        <img src="./images/1 (6).jpg" alt="Retouching 2">
+        <img src="./images/1 (6).jpg" alt="All Portfolio 2">
+
+      </div>
+      <div id="color-correction" class="image-gallery">
+        <img src="./images/1 (6).jpg" alt="Color Correction 1">
+        <img src="./images/1 (6).jpg" alt="Color Correction 2">
+        <img src="./images/1 (6).jpg" alt="All Portfolio 2">
+
+      </div>
+      <div id="model-jewelry" class="image-gallery">
+        <img src="./images/1 (6).jpg" alt="Model Jewelry 1">
+        <img src="./images/1 (6).jpg  " alt="Model Jewelry 2">
+        <img src="./images/1 (6).jpg  " alt="Model Jewelry 2">
+        
+
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+  
 
     <!-- Workflow Section -->
     <section id="workflow" class="workflow-section">
@@ -360,6 +249,7 @@
         <a href="#contact" class="btn btn-custom btn-lg mt-4">Try It Now</a>
       </div>
     </section>
+    
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
@@ -397,42 +287,50 @@
         </form>
       </div>
     </section>
+    <section id="pricing">
     <div class="pricing-container">
-      <h1 class="pricing-header">Pricing</h1>
+      <h1 class="pricing-header">Get the Best Price</h1>
       <div class="pricing-plans">
         <!-- Basic Plan -->
         <div class="pricing-plan">
           <h2 class="plan-title">Basic</h2>
+          <div class="pricing-color">
           <p class="plan-price">$9/month</p>
           <p class="plan-details">Perfect for individuals starting out.</p>
+        </div>
           <a href="#" class="plan-action">Choose Basic</a>
         </div>
 
         <!-- Pro Plan -->
         <div class="pricing-plan">
           <h2 class="plan-title">Pro</h2>
+          <div class="pricing-color">
           <p class="plan-price">$29/month</p>
           <p class="plan-details">Ideal for professionals and small teams.</p>
+          </div>
           <a href="#" class="plan-action">Choose Pro</a>
         </div>
 
         <!-- Premium Plan -->
         <div class="pricing-plan">
           <h2 class="plan-title">Premium</h2>
+          <div class="pricing-color">
           <p class="plan-price">$49/month</p>
           <p class="plan-details">
             Best for large organizations and enterprises.
           </p>
+          </div>
           <a href="#" class="plan-action">Choose Premium</a>
         </div>
       </div>
+      </section>
 
       <!-- Custom Quote Link -->
       <div class="custom-quote">
         <p>Need a tailored solution? <a href="#">Request a Custom Quote</a></p>
       </div>
     </div>
-
+   
     <div class="testimonials-container">
       <h1 class="testimonials-header">Testimonials & Portfolio</h1>
       <div class="testimonials-carousel">
@@ -456,6 +354,7 @@
         <!-- Example 3 -->
         <div class="testimonial">
           <img src="./images/6 (2).jpg" alt="Before and After Example 3" />
+          <section id = "blog">
           <h2 class="testimonial-title">Highly Satisfied</h2>
           <p>"The quality of work exceeded my expectations. A++!"</p>
         </div>
@@ -469,6 +368,7 @@
         ></iframe>
       </div>
     </div>
+  </section>
 
     <div class="contact-container">
       <h1 class="contact-header">Contact Us</h1>
@@ -494,22 +394,43 @@
         >
       </div>
     </div>
+    <!DOCTYPE html>
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <!-- Address and Contact Info -->
+      <div class="footer-section contact-info">
+        <h4>My Jewelry Retouch</h4>
+        <p>D 247/1, Sector 63</p>
+        <p>Noida, India 201301</p>
+        <p><strong>Phone:</strong> +123 456 7890</p>
+        <p><strong>Email:</strong> <a href="mailto:info@myjewelaryretouch.com">info@myjewelaryretouch.com</a></p>
+      </div>
+      
+      <!-- Newsletter Section -->
+      <div class="footer-section newsletter">
+        <h4>Our Newsletter</h4>
+        <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+        <form action="#" method="POST" class="newsletter-form">
+          <input type="email" name="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>© Copyright My Jewelry Retouch All Rights Reserved</p>
+    </div>
+  </footer>
+</body>
+</html>
 
     <div class="footer-container">
       <h1 class="footer-header">Footer</h1>
-      <div class="footer-links">
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Pricing</a>
-        <a href="#">Blog</a>
-        <a href="#">About Us</a>
-      </div>
-
       <div class="social-icons">
-        <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
-        <a href="#"><img src="pinterest-icon.png" alt="Pinterest" /></a>
-        <a href="#"><img src="linkedin-icon.png" alt="LinkedIn" /></a>
+        <a href="#"><img src="./images/instagram.jpg" alt="Instagram" /></a>
+        <a href="#"><img src="./images/piniterest.jpg" alt="Pinterest" /></a>
+        <a href="#"><img src="./images/linkedin.png" alt="LinkedIn" /></a>
       </div>
 
       <div class="contact-info">
@@ -517,6 +438,7 @@
         <p>Address: 123 Business Street, City, Country</p>
       </div>
     </div>
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
